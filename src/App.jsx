@@ -1,16 +1,14 @@
 import "./App.css";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import UseIsOnline from "./Hooks/UseIsOnline";
 
 function App() {
-  const todo = UseTodos("");
-  return (
-    <>
-      {/* {todos.map((todos) => (
-        <Track todo={todos} />
-      ))} */}
-    </>
-  );
+  const online = UseIsOnline();
+
+  if (online) {
+    return "Online";
+  }
+  s;
+  return "Offline";
 }
 
 //custom hooks
